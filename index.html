@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- !GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <!-- !GOOGLE FONT -->
+        <script type="module" charset="utf-8" src="./app.js"></script>
+        <link rel="icon" type="image/svg" href="" />
+        <link rel="apple-touch-icon" href="" />
+        <link rel="canonical" href="" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <h1 class="game_title"></h1>
+        </header>
+        <main>
+            <div class="game_board">
+                <h2>Instrucciones:</h2>
+                <p class="instructions"></p>
+                <form class="lvl_section check_data">
+                    <div class="inputs_control">
+                        <div class="input_control">
+                            <label for="level">Selecciona un nivel:</label>
+                            <select name="level" id="level" required>
+                                <option value="primero">Primero - 1</option>
+                                <option value="segundo">Segundo - 2</option>
+                                <option value="tercero">Tercero - 3</option>
+                            </select>
+                        </div>
+                        <div class="input_control">
+                            <label for="name">¿Como te llamas?</label>
+                            <input type="text" class="name" name="name" placeholder="Escribe tu nombre" required autocomplete="off" />
+                        </div>
+                    </div>
+
+                    <div class="submit_control">
+                        <button type="submit" class="form_submit">Empezar</button>
+                    </div>
+                </form>
+                <form class="lvl_section hide_section select_character">
+                    <div class="inputs_control game_options">
+                        <div class="input_control" class="option">
+                            <label for="vampiro" data-ref="vampiro">
+                                <input type="radio" id="vampiro" class="character_selection" name="character" value="vampiro" data-description="Vampiro" />
+                                <img src="./assets/characters/vampire.svg" />
+                                <span>Vampiro</span>
+                            </label>
+                        </div>
+                        <div class="input_control" class="option">
+                            <label for="zombie" data-ref="zombie">
+                                <input type="radio" id="zombie" class="character_selection" name="character" value="zombie" data-description="Zombie" />
+                                <img src="./assets/characters/zombie.svg" />
+                                <span>Zombie</span>
+                            </label>
+                        </div>
+                        <div class="input_control" class="option">
+                            <label for="mounstro_de_frankenstein" data-ref="mounstro_de_frankenstein">
+                                <input type="radio" id="mounstro_de_frankenstein" class="character_selection" name="character" value="mounstro_de_frankenstein" data-description="Mounstro de Frankenstein" />
+                                <img src="./assets/characters/frankenstein_monster.svg" />
+                                <span>Mounstro de Frankensietn</span>
+                            </label>
+                        </div>
+                        <div class="input_control" class="option">
+                            <label for="hombre_lobo" data-ref="hombre_lobo">
+                                <input type="radio" id="hombre_lobo" class="character_selection" name="character" value="hombre_lobo" data-description="Hombre Lobo" />
+                                <img src="./assets/characters/manwolf.svg" />
+                                <span>Hombre Lobo</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submit_control">
+                        <button type="submit" class="form_submit">Elegir</button>
+                    </div>
+                </form>
+                <form class="lvl_section hide_section lvl_1">
+                    <div class="placeholder">
+                        <div class="container">
+                            <h3 class="subtitle">Cantidad</h3>
+                            <span class="number_placeholder"></span>
+                        </div>
+                        <div class="container">
+                            <h3 class="subtitle">Ingrediente</h3>
+                            <span class="icon_container"></span>
+                        </div>
+                    </div>
+                    <div class="inputs_control game_options">
+                        <div class="input_control">
+                            <label for="lvl_1_option_1" class="option lvl_1_option_1_label" data-ref="">
+                                <input type="radio" id="lvl_1_option_1" class="lvl_1_option_1" name="tables" value="" />
+                                <span class="content"></span>
+                            </label>
+                        </div>
+                        <div class="input_control">
+                            <label for="lvl_1_option_2" class="option lvl_1_option_2_label" data-ref="">
+                                <input type="radio" id="lvl_1_option_2" class="lvl_1_option_2" name="tables" value="" />
+                                <span class="content"></span>
+                            </label>
+                        </div>
+                        <div class="input_control">
+                            <label for="lvl_1_option_3" class="option lvl_1_option_3_label" data-ref="">
+                                <input type="radio" id="lvl_1_option_3" class="lvl_1_option_3" name="tables" value="" />
+                                <span class="content"></span>
+                            </label>
+                        </div>
+                        <div class="input_control">
+                            <label for="lvl_1_option_4" class="option lvl_1_option_4_label" data-ref="">
+                                <input type="radio" id="lvl_1_option_4" class="lvl_1_option_4" name="tables" value="" />
+                                <span class="content"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="submit_control">
+                        <button type="submit" class="form_submit">Evaluar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <img src="./assets/characters/frankenstein_monster.svg" class="character_frank character_img" data-ref="mounstro_de_frankenstein" />
+        <img src="./assets/characters/manwolf.svg" class="character_wolf character_img" data-ref="hombre_lobo" />
+        <img src="./assets/characters/zombie.svg" class="character_zomb character_img" data-ref="zombie" />
+        <img src="./assets/characters/vampire.svg" class="character_vamp character_img" data-ref="vampiro" />
+    </body>
+</html>

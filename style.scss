@@ -131,22 +131,16 @@ INPUT[type="radio"] {
     border-radius: 1rem;
     overflow: hidden;
 }
-SPAN {
-    display: block;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    height: max-content;
-}
+
 .inputs_control {
     @include flex(row, center, center);
     flex-wrap: wrap;
     gap: 0.5rem;
     .input_control {
         @include flex(column, center, center);
-        min-width: 12rem;
-        max-width: 25%;
-        gap: 0.5rem;
+        min-width: 8rem;
+        width: 25%;
+        max-width: 10rem;
         height: max-content;
         INPUT[type="text"] {
             text-align: center;
@@ -155,11 +149,26 @@ SPAN {
             width: 15rem;
             font-size: var(--fontSize_M);
         }
+        SPAN {
+            display: block;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            height: max-content;
+        }
+    }
+}
+.check_data {
+    .inputs_control {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 .lvl_1 {
     LABEL {
         min-height: 5rem;
+        height: fit-content;
     }
     .content {
         display: block;

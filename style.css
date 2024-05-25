@@ -141,15 +141,6 @@ INPUT[type=radio] {
   overflow: hidden;
 }
 
-SPAN {
-  display: block;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  height: -moz-max-content;
-  height: max-content;
-}
-
 .inputs_control {
   display: flex;
   flex-direction: row;
@@ -163,9 +154,9 @@ SPAN {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 12rem;
-  max-width: 25%;
-  gap: 0.5rem;
+  min-width: 8rem;
+  width: 25%;
+  max-width: 10rem;
   height: -moz-max-content;
   height: max-content;
 }
@@ -175,9 +166,25 @@ SPAN {
   width: 15rem;
   font-size: var(--fontSize_M);
 }
+.inputs_control .input_control SPAN {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.check_data .inputs_control {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .lvl_1 LABEL {
   min-height: 5rem;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .lvl_1 .content {
   display: block;
